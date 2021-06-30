@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<body>
+<title>Certificate download for the quiz</title>
+<h1 style="text-align:center;">You can Download your certificates here</h1><br><br><br>
+<form style="text-align:center;"action="PayslipServlet" method="get">
+        First name:   <input type="text" name="fname" id="fname"><br/><br>
+	Last name:    <input type="text" name="lname" id="lname"><br/><br><br>
+        <script>document.write(document.getElementById('fname').value+" "+document.getElementById('lname').value);</script>
+        <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
