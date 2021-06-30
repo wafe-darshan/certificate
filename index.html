@@ -3,12 +3,24 @@
 <body>
 <title>Certificate download for the quiz</title>
 <h1 style="text-align:center;">You can Download your certificates here</h1><br><br><br>
-<form style="text-align:center;"action="PayslipServlet" method="get">
-        First name:   <input type="text" name="fname" id="fname"><br/><br>
-	Last name:    <input type="text" name="lname" id="lname"><br/><br><br>
-        <script>document.write(document.getElementById('fname').value+" "+document.getElementById('lname').value);</script>
-        <input type="submit" value="Submit">
-</form>
+<form style="text-align:center;" action="PayslipServlet" method="get">
+          
+          First name:   <input type="text" name="fname" id="fname"><br/><br>
+	  Last name:    <input type="text" name="lname" id="lname"><br/><br>
+          <input type="button" value="Submit" onClick="pr()"> <br>
+          
+         
+          
+        </form>
 
+        <script>
+          function pr() {
+            document.getElementById("result").innerHTML = document.getElementById('fname').value +" "+ document.getElementById('lname').value;
+          }
+        </script>
+	
+<div class="container">	
+	<img style="height:100%;width:100%" src=certificate.png>
+	<div class="centered"><span id="result"></span></div>
 </body>
 </html>
