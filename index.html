@@ -3,10 +3,10 @@
 <body style="background-color:#6dd5ed;">
 <title>Certificate download for the quiz</title>
 <h1 style="text-align:center;">You can Download your certificates here</h1><br>
-<p style="color:#753a88;text-align:center;"><h2>Enter the name which you wish to appear on the certificate</h2></p>
+<p style="color:#753a88;"text-align="center;"><h2>Enter the name which you wish to appear on the certificate</h2></p>
 <form style="text-align:center;" action="PayslipServlet" method="get">
-          Name:   <input type="text" name="fname" id="fname"><br/>
-	  College Name:   <input type="text" name="fname" id="cname"><br>
+          Name   :   <input type="text" name="fname" id="fname"><br/>
+	  College:   <input type="text" name="fname" id="cname"><br>
 	  <label > Select category </label>  
 	  <select id="selectNow">  
 	  <option value = "Student"> Student  
@@ -16,7 +16,10 @@
 	  <option value = "Faculty"> Faculty
 	  </option>
 	  </select><br>
-	  
+	  function display() {
+            var obj = document.getElementById("selectNow");
+            a=document.write(obj.options[obj.selectedIndex].text);
+          }
 	  <input type="button" value= "Submit" onClick="pr()"> <br>
 	  <p><em>***You cannot download the certificate so it is advised to take screen shot of the certificate***</em></p>
          
@@ -25,7 +28,7 @@
 
         <script>
           function pr() {
-            document.getElementById("result").innerHTML = document.getElementById('fname').value +" "+ document.write(obj.options[obj.selectedIndex].text)+ " from " + document.getElementById('cname').value;
+            document.getElementById("result").innerHTML = document.getElementById('fname').value +" "+ a + " from " + document.getElementById('cname').value;
           }
         </script>
 	<br><br>
