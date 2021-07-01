@@ -5,30 +5,19 @@
 <h1 style="text-align:center;">You can Download your certificates here</h1><br>
 <p ><h2 style="text-align:center;color:#753a88;">Enter the name which you wish to appear on the certificate</h2></p>
 <form style="text-align:center;" action="PayslipServlet" method="get">
-          Name   :   <input type="text" name="fname" id="fname"><br/>
-	  College:   <input type="text" name="fname" id="cname"><br>
-	  <label > Select category </label>  
-	  <select id="selectNow">  
-	  <option value = "Student"> Student  
-	  </option>  
-	  <option value = "Research Scholar"> Research Scholar   
-	  </option>  
-	  <option value = "Faculty"> Faculty
-	  </option>
-	  </select><br>
+          Name    :   <input type="text" name="fname" id="fname"><br/>
+	  College :   <input type="text" name="cname" id="cname"><br>
+	  Category:   <input type="text" name="category" id="category"><br>
+	  <br>
 	  <input type="button" value= "Submit" onClick="pr()"> <br>
 	  <p><em>***You cannot download the certificate so it is advised to take screen shot of the certificate***</em></p>
          
           
         </form>
 
-        <script>
-	  function display() {
-            var obj = document.getElementById("selectNow");
-            a=document.write(obj.options[obj.selectedIndex].text);
-          }	
+        <script>	
           function pr() {
-            document.getElementById("result").innerHTML = document.getElementById('fname').value +" "+ a + " from " + document.getElementById('cname').value;
+            document.getElementById("result").innerHTML = document.getElementById('fname').value +" " +document.getElementById('category').value+ " from " + document.getElementById('cname').value;
           }
         </script>
 	<br><br>
